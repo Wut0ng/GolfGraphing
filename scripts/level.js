@@ -42,6 +42,7 @@ class Level {
     }
 
     load(is_reload) {
+        document.body.classList.remove("no_function_color");
         for (let i = 0; i < this.custom_classes.length; i++) {
             document.body.classList.add(this.custom_classes[i]);
         }
