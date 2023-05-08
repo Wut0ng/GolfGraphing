@@ -249,7 +249,7 @@ const CONFIG = {
             sections: [
                 { type: "y_function", boxes: "[b]-x"},
                 { type: "y_function", boxes: "[b]x" },
-                { type: "bank", boxes: "[fs]1[fm]2[fe]/-/3/6/-/+/2/-/7/-/4"}
+                { type: "bank", boxes: "[fs]1[fm]2[fe]/-/6/11/+/-/8/-/3"}
             ]
         }, // ------------------------------------------- Chapter 2 | Level 7 -------------------------------------------
         {  // ------------------------------------------- Chapter 2 | Level 8 -------------------------------------------
@@ -284,7 +284,7 @@ const CONFIG = {
                 { pos_x: 310,  pos_y: 490, vel_x: 0,  vel_y: 0,  grav_x: 0, grav_y: 1, radius: 20, color: "rgb(245, 245, 245)", id: 1 }
             ],
             holes: [
-                { pos_x: 1650, pos_y: 525, radius: 45, color: "rgb(190, 190, 190)", id: 1 }
+                { pos_x: 1670, pos_y: 655, radius: 45, color: "rgb(190, 190, 190)", id: 1 }
             ],
             zones: [
                 { type: "wall", verticies: [ [500, 1200], [600, 1200], [600, 820], [500, 820] ] },
@@ -300,7 +300,7 @@ const CONFIG = {
                 { type: "wall", verticies: [ [1500, 300], [1600, 300], [1600, 0], [1500, 0] ] },
 
                 { type: "grav", verticies: [ [500, 0], [750, 0], [750, 1200], [500, 1200] ] },
-                { type: "grav", verticies: [ [1050, 0], [1580, 0], [1580, 1200], [1050, 1200] ] },
+                { type: "grav", verticies: [ [1050, 0], [1500, 0], [1500, 1200], [1050, 1200] ] },
                 
             ],
           
@@ -309,8 +309,7 @@ const CONFIG = {
                 { type: "y_function", boxes: "[b][fs]x[fm]8[fe]" },
                 { type: "y_function", boxes: "[b]x"},
                 { type: "y_function", boxes: "[b]-x"},
-                { type: "bank", boxes: "[fs]3[fm]4[fe]/-/3/4/[fs]1[fm]4[fe]/8/[fs]-1[fm]8[fe]/+/2/-/-/[fs]1[fm]2[fe]/+/6/5/+"}
-                
+                { type: "bank", boxes: "7/-/[fs]1[fm]2[fe]/-/3/+/3/+/9/[fs]-1[fm]8[fe]/+/2"}
             ]
         }, // ------------------------------------------- Chapter 2 | Level 9 -------------------------------------------
         {  // ------------------------------------------- Chapter 2 | Level 10 -------------------------------------------
