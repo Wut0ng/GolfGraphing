@@ -493,7 +493,7 @@ function compute_collisions(time_elapsed) {
 var time_of_last_update = performance.now();
 function physics_loop() {
     let new_time = performance.now()
-    let time_elapsed = Math.min(new_time - this.time_of_last_update, 180);
+    let time_elapsed = Math.min(new_time - this.time_of_last_update, 20);
     time_of_last_update = new_time;
 
     if (is_physics_running && document.hasFocus()) {
@@ -507,7 +507,7 @@ function physics_loop() {
 }
 
 function check_win() {
-    if (balls.length <= 0 == !level_failed) {
+    if (balls.length <= 0 && !level_failed) {
         current_level.trigger_win();
     }
 }
