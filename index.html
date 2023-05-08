@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Graphing</title>
+    <link rel="icon" href="imgs/icon.ico" type="image/png">
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="layer">
+        <div class="master_top">
+            <div class="header_left"><div class="header_title">Chapter <span id="chapter_number" class="header_title_number"></span> <span class="header_title_bar">|</span> Level <span id="level_number" class="header_title_number"></span></div></div>
+            <div class="header_right">
+                <div onmousedown="playstop_button_down()" onmouseup="playstop_button_up()" onmouseleave="playstop_button_leave()" class="header_button_sqare header_button_large play_stop_button"><div class="header_button_text play_button">Play</div><div class="header_button_text stop_button">Stop</div><div class="header_button_icon header_button_icon_special icon_play_stop"></div></div>
+                <div onmousedown="reset_button_down()" onmouseup="reset_button_up()" onmouseleave="reset_button_leave()" class="header_button_sqare header_button_large reset_button"><div class="header_button_text">Reset</div><div class="header_button_icon header_button_icon_special icon_reset"></div></div>
+                <div onmousedown="hint_button_down()" onmouseup="hint_button_up()" onmouseleave="hint_button_leave()" class="header_button_sqare hint_button"><div class="header_button_icon icon_hint"></div></div>
+                <div onmousedown="menu_button_down()" onmouseup="menu_button_up()" onmouseleave="menu_button_leave()" class="header_button_sqare header_button_end menu_button"><div class="header_button_icon icon_menu"></div></div>
+            </div>
+        </div>
+        <div class="master_bottom">
+            <div class="master_left" id="master_left">
+                <div class="inner_master_left" id="inner_master_left"></div>
+            </div>
+            <div class="master_resizer" id="master_resizer"></div>
+            <div class="master_right">
+                <div class="master_right_inner" id="master_right_inner">
+                    <div class="ball_container"><svg class="svg_div svg_div_underlay" id="svg_div_underlay"></svg></div>
+                    <div class="ball_container"><svg class="svg_div svg_div_zones" id="svg_div_zones"></svg></div>
+                    <div class="ball_container bg_grid_2"></div>
+                    <div class="ball_container bg_grid_1"></div>
+                    <div class="ball_container"><svg class="svg_div svg_div_midlay" id="hole_div"></svg></div>
+                    <div class="ball_container" id="ball_container_svgs"></div>
+                    <div class="ball_container"><svg class="svg_div svg_div_overlay" id="svg_div"></svg></div>
+                    <div class="ball_container explosion_confetti_container"><canvas width="1920" height="1080" class="canvas_confetti_explosion" id="canvas_confetti_explosion"></canvas></div>
+                </div>
+            </div>
+            <div class="tooltip">
+                <div class="tooltip_title" id="tooltip_title"></div>
+                <div class="tooltip_subtitle" id="tooltip_subtitle"></div>
+                <div class="tooltip_image"></div>
+            </div>
+        </div>
+    </div>
+    <div class="layer layer_confetti">
+        <canvas width="1920" height="1080" class="canvas_confetti" id="canvas_confetti"></canvas>
+    </div>
+    <div class="layer layer_checkmark">
+        <svg class="checkmark" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+    </div>
+    <div class="layer hidden_layer">
+        <div class="hidden_icon"></div>
+    </div>
+    <div class="layer menu_layer">
+        <div class="main_menu">
+            <div onmousedown="menu_button_down()" onmouseup="menu_button_up()" onmouseleave="menu_button_leave()" class="close_menu_button"><div class="close_menu_button_icon icon_x"></div></div>
+            <div class="level_selection_box" id="level_selection_box">
+                <div onclick="play_level(0)" class="level_selection_level"><div class="level_selection_level_text">Chapter 1    -    Level 1</div><div class="button_play_level">Play</div></div>
+                <div onclick="play_level(1)" class="level_selection_level"><div class="level_selection_level_text">Chapter 1    -    Level 2</div><div class="button_play_level">Play</div></div>
+                <div onclick="play_level(2)" class="level_selection_level"><div class="level_selection_level_text">Chapter 1    -    Level 3</div><div class="button_play_level">Play</div></div>
+                <div onclick="play_level(3)" class="level_selection_level"><div class="level_selection_level_text">Chapter 1    -    Level 4</div><div class="button_play_level">Play</div></div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/box.js"></script>
+    <script src="scripts/confetti.js"></script>
+    <script src="scripts/cookies.js"></script>
+    <script src="scripts/events.js"></script>
+    <script src="scripts/level.js"></script>
+    <script src="scripts/physics.js"></script>
+    <script src="scripts/resizer.js"></script>
+    <script src="scripts/section.js"></script>
+    <script src="scripts/svg_animation.js"></script>
+    <script src="scripts/verticies.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
