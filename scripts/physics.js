@@ -424,7 +424,12 @@ function set_ball_vertices_along_axis(obj, axis) {
 // -------------------------------------------------------------------------------------------------------------------
 
 function is_collision_suitable(body1, body2) {
-    return true; // TEMP TODO check if two body are close enough before
+    if (body1 instanceof Circle && body1 instanceof Circle) {
+        if (body1.pos.sub(body2.pos).mag() > body1.radius + body2.radius + 3) {
+            return false;
+        }
+    } 
+    return true;
 }
 
 function check_collision_ball(ball1, ball2) {
@@ -513,7 +518,7 @@ function check_win() {
 }
 
 function check_ball_positions() {
-    for (let i = 0; i < balls.length; i++) { // HERE TODO TEMP
+    for (let i = 0; i < balls.length; i++) {
         if (balls[i].pos.x < 0-(balls[i].radius-4) || balls[i].pos.x > 1920+(balls[i].radius-4) || balls[i].pos.y < 0-(balls[i].radius-4) || balls[i].pos.y > 1080+(balls[i].radius-4)) {
             level_failed = true;
             balls[i].explode();
